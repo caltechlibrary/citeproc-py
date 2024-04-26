@@ -373,7 +373,7 @@ class TextCased(object):
                 text = ' '.join(output)
             elif text_case == 'title':
                 output = []
-                prev = ':'
+                prev = ':' #This ensures first word is capitilized
                 for word in text.words():
                     if word.islower() and (str(word) not in self._stop_words or
                         prev in (':', '.')):
